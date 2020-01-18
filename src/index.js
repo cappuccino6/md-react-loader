@@ -16,5 +16,6 @@ export default function (source) {
   this.cacheable && this.cacheable()
   const options = Object.assign(defaultOptions, getOptions(this))
   let callback = this.async()
-  callback(null, `export default ${renderMarkdown(source)}`)
+  const a = renderMarkdown(source)
+  callback(null, `export default '${a.trim()}'`)
 }

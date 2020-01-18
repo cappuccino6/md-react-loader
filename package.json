@@ -17,6 +17,7 @@
     "fs": "0.0.1-security",
     "loader-utils": "^1.2.3",
     "path": "^0.12.7",
+    "react": "^16.12.0",
     "webpack": "^4.41.5"
   },
   "dependencies": {
