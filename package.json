@@ -1,12 +1,12 @@
 {
   "name": "md-react-loader",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf dist",
-    "build": "npm run clean && cross-env NODE_ENV=production && BABEL_ENV=esm babel src -d dist --copy-files"
+    "clean": "rm -rf lib",
+    "build": "npm run clean && cross-env NODE_ENV=production && BABEL_ENV=esm babel src -d lib --copy-files"
   },
   "author": "",
   "license": "MIT",
@@ -17,5 +17,8 @@
   },
   "dependencies": {
     "cross-env": "^6.0.3"
-  }
+  },
+  "files": [
+    "lib/"
+  ]
 }
