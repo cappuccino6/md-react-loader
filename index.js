@@ -20,10 +20,9 @@ function loader (source) {
 
   const result = `
     import React from 'react'
-    const HtmlComponent = <React.Fragment>${html}</React.Fragment>
+    const Component = <React.Fragment>${html}</React.Fragment>
     export default {
-      html: '${html}',
-      Component: HtmlComponent,
+      Component,
       size: '${html.length}'
     }
   `
