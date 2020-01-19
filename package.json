@@ -1,11 +1,11 @@
 {
   "name": "md-react-loader",
-  "version": "0.0.9",
+  "version": "0.0.15",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf lib",
-    "build": "npm run clean && cross-env NODE_ENV=production && BABEL_ENV=esm babel src -d lib --copy-files"
+    "build": "npm run clean && cross-env NODE_ENV=production && BABEL_ENV=esm babel index.js -d lib --copy-files"
   },
   "author": "",
   "license": "MIT",
@@ -21,6 +21,7 @@
     "webpack": "^4.41.5"
   },
   "dependencies": {
+    "commonmark": "^0.29.1",
     "cross-env": "^6.0.3"
   },
   "files": [
