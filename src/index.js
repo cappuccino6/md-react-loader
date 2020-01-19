@@ -4,6 +4,8 @@ import fs from 'fs-extra'
 
 const defaultOptions = {}
 
+const codeReg = new RegExp('<code class=([\\s\\S]*)>([\\s\\S]*)</code>')
+
 // 读取并渲染 markdown 文件
 function renderMarkdown(source) {
   const fileContent = JSON.parse(JSON.stringify(source))
@@ -16,11 +18,17 @@ function loader (source) {
   this.cacheable && this.cacheable()
   const options = Object.assign(defaultOptions, getOptions(this))
   let callback = this.async()
-  const html = renderMarkdown(source).trim()
-
+  let html = renderMarkdown(source).trim()
+  let code = codeReg.exec(html)
+  if (code) {
+    html = html.replace(code[2], '{`' + code[2] + '`}')
+  }
+  
   const result = `
-    import React from 'react'
-    const Component = <React.Fragment>${html}</React.Fragment>
+    import React, { Fragment } from 'react'
+    const Component = () => (
+      <Fragment>${html}</Fragment>
+    )
     export default Component
   `
   callback(null, result)
