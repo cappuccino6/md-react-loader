@@ -1,15 +1,19 @@
-## this is a markdown file loader
+## This is a markdown file loader
 
-### why this?
+
+### Why this?
 
 This loader will help you directly import a markdown file as a common react component, is that amazing?
 
 Previously when we want to load a markdown file, we may need to do some extra work to load the file, and unfortunetly, babel will throw some error while you do these jobs.
 
-will use this loader, you need to download it first
+
+### How to use?
+
+While using this loader, you need to download it first
 
 ```
-npm i md-react-loader -s-dev
+npm i md-react-loader -save-dev
 ```
 
 Secondly, write an item of config of your webpack module rule
@@ -27,7 +31,7 @@ Secondly, write an item of config of your webpack module rule
 
 But i must remind you that, you need babel loader to compile the target file as a common js file
 
-```
+```js
 {
   test: /\.(js|jsx|md)$/,
   use: [
@@ -40,7 +44,7 @@ But i must remind you that, you need babel loader to compile the target file as 
 
 And if you got some error, may be you shold check you babelrc config, have you write your babel config correctly?
 
-```
+```js
 {
   "presets":[
     "@babel/preset-env",

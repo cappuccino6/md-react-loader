@@ -9,6 +9,10 @@
   },
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fe-Icy/md-react-loader.git"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.6",
