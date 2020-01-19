@@ -1,9 +1,13 @@
 {
   "name": "md-react-loader",
   "version": "0.0.34",
-  "description": "",
+  "description": "Webpack loader for markdown loader in React.js",
   "main": "lib/index.js",
   "scripts": {
+    "test": "npm run lint && npm run spec",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "spec": "ava",
     "clean": "rm -rf lib",
     "build": "npm run clean && cross-env NODE_ENV=production && BABEL_ENV=esm babel src -d lib --copy-files && sass src/index.scss lib/index.css"
   },
@@ -23,10 +27,11 @@
     "webpack": "^4.41.5"
   },
   "dependencies": {
+    "ava": "^2.4.0",
     "braces": "^2.3.1",
     "commonmark": "^0.29.1",
     "cross-env": "^6.0.3",
-    "fs-extra": "^8.1.0"
+    "standard": "^14.3.1"
   },
   "files": [
     "lib/"
