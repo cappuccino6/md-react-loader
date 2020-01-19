@@ -23,7 +23,10 @@ module.exports = {
         test: /\.(md)$/,
         use: [
           {
-            loader: path.resolve(__dirname, '../lib/index.js')
+            loader: path.resolve(__dirname, '../lib/index.js'),
+            options: {
+              html: true
+            }
           }
         ]
       }
