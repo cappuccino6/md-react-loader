@@ -1,7 +1,7 @@
 
-[license](https://img.shields.io/npm/l/md-react-loader)
-[version](https://img.shields.io/npm/v/md-react-loader)
-[size](https://img.shields.io/bundlephobia/minzip/md-react-loader)
+![license](https://img.shields.io/npm/l/md-react-loader)
+![version](https://img.shields.io/npm/v/md-react-loader)
+![size](https://img.shields.io/bundlephobia/minzip/md-react-loader)
 
 ## This is a markdown file loader
 
