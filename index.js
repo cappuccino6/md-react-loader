@@ -23,7 +23,6 @@ function loader (source) {
     const HtmlComponent = <React.Fragment>${html}</React.Fragment>
     export default {
       html: '${html}',
-      raw: '${source}',
       Component: HtmlComponent,
       size: '${html.length}'
     }
