@@ -1,6 +1,6 @@
 {
   "name": "md-react-loader",
-  "version": "0.0.33",
+  "version": "0.0.34",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fe-Icy/md-react-loader.git"
+    "url": "git+https://github.com/zybingo/md-react-loader.git"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
