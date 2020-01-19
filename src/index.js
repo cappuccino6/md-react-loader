@@ -21,7 +21,7 @@ function loader (source) {
   let html = renderMarkdown(source).trim()
   let code = codeReg.exec(html)
   if (code) {
-    html = html.replace(code[2], '{`' + code[2] + '`}').replace('&gt;', '>').replace('&lt;', '<')
+    html = html.replace(code[2], '{`' + code[2] + '`}').replace(/&gt;/g, '>').replace(/&lt;/g, '<')
   }
   const result = `
     import React, { Fragment } from 'react'
