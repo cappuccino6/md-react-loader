@@ -1,7 +1,7 @@
 
 ![license](https://img.shields.io/npm/l/md-react-loader)
 ![version](https://img.shields.io/npm/v/md-react-loader)
-![size](https://img.shields.io/bundlephobia/minzip/md-react-loader)
+![downloads](https://img.shields.io/npm/dt/md-react-loader)
 
 ## This is a markdown file loader
 
@@ -79,23 +79,41 @@ and rewrite your babelrc file:
 }
 ```
 
-At the end, you just need to import the file directly, and treat it as a react component
+At the end, you just need to import the file directly, then you will get a object like this
 
 ```js
-import MdComponent from './MyTest.md'
+{
+  html: 'your html',
+  Component: A react component
+}
+```
 
-const MyComponent = () => <MdComponent />
+so you can whatever use the Component directly, or render html in your own way
+
+```js
+import Md from './MyTest.md'
+const MyComponent = () => <Md.Component />
+export default MyComponent
+
+or
+
+import Md from './MyTest.md'
+const MyComponent = () => (
+  <div
+    dangerouslySetInnerHTML={{ __html: Md.html }}
+  />
+)
 export default MyComponent
 ```
 
 Besides, if your markdown file contains some code and you are going to highlight them, you just need to download prismjs on npm and import css file in this library
 
 ```js
-import MdComponent from './MyTest.md'
+import Md from './MyTest.md'
 import 'prismjs'
 import 'md-react-loader/lib/index.css'
 
-const MyComponent = () => <MdComponent />
+const MyComponent = () => <Md.Component />
 export default MyComponent
 ```
 
