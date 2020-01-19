@@ -1,0 +1,107 @@
+h1 {
+  font-size: 20px;
+}
+
+img {
+  width: 100%;
+  font-size: 0;
+}
+
+pre[class*='language-'] {
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  background: rgba(0,0,0,.05);
+  -webkit-overflow-scrolling: touch;
+  text-align: left;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  & > code {
+    overflow: initial;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    color: dodgerblue;
+  }
+
+  & span[class*='keyword'] {
+    color: indianred;
+  }
+
+  & span[class*='keyword'],
+  & span[class*='prolog'],
+  & span[class*='doctype'],
+  & span[class*='cdata'] {
+    color: slategray;
+  }
+
+  & span[class*='punctuation'] {
+    color: #1a1a1a;
+  }
+  
+  & span[class*='namespace'] {
+    opacity: 0.7;
+  }
+
+  & span[class*='property'],
+  & span[class*='tag'],
+  & span[class*='boolean'],
+  & span[class*='number'],
+  & span[class*='symbol'],
+  & span[class*='deleted'],
+  & span[class*='constant'] {
+    color: saddlebrown;
+  }
+
+  & span[class*='selector'],
+  & span[class*='attr-name'],
+  & span[class*='string'],
+  & span[class*='char'],
+  & span[class*='builtin'],
+  & span[class*='inserted'] {
+    color: rgb(19, 58, 38);
+  }
+  
+  & span[class*='operator'],
+  & span[class*='entity'],
+  & span[class*='url'],
+  & span[class*='language-css string'],
+  & span[class*='style string'] {
+    color: salmon;
+  }
+
+  & span[class*='atrule'],
+  & span[class*='attr-value'],
+  & span[class*='keyword'] {
+    color: rgb(47, 93, 78);
+  }
+  
+  & span[class*='function'] {
+    color: tomato;
+  }
+
+  & span[class*='regex'],
+  & span[class*='important'],
+  & span[class*='variable'] {
+    color: goldenrod;
+  }
+
+  & span[class*='important'],
+  & span[class*='bold'] {
+    font-weight: bold;
+  }
+
+  & span[class*='italic'] {
+    font-style: italic;
+  }
+
+  & span[class*='entity'] {
+    cursor: help;
+  }
+}

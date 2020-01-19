@@ -1,6 +1,6 @@
 import { getOptions } from 'loader-utils'
 import commonmark from 'commonmark'
-import fs from 'fs'
+import fs from 'fs-extra'
 
 const defaultOptions = {}
 
@@ -16,15 +16,12 @@ function loader (source) {
   this.cacheable && this.cacheable()
   const options = Object.assign(defaultOptions, getOptions(this))
   let callback = this.async()
-  const html = renderMarkdown(source).trim().replace('\n', '')
+  const html = renderMarkdown(source).trim()
 
   const result = `
     import React from 'react'
     const Component = <React.Fragment>${html}</React.Fragment>
-    export default {
-      Component,
-      size: '${html.length}'
-    }
+    export default Component
   `
   callback(null, result)
 }
