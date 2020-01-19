@@ -21,14 +21,14 @@ function loader (source) {
   if (code) {
     html = html.replace(code[2], '{`' + code[2] + '`}').replace(/&gt;/g, '>').replace(/&lt;/g, '<')
   }
-  let template = `
+  const template = `
     import React, { Fragment } from 'react'
     const Component = () => (
       <Fragment>${html}</Fragment>
     )
     export default Component
   `
-  let result = null
+  let result = template
   if (options.html) {
     result = html
   }
