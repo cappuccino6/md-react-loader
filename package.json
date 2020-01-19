@@ -1,6 +1,6 @@
 {
   "name": "md-react-loader",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "webpack": "^4.41.5"
   },
   "dependencies": {
+    "braces": "^2.3.1",
     "commonmark": "^0.29.1",
     "cross-env": "^6.0.3",
     "fs-extra": "^8.1.0"
