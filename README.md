@@ -27,32 +27,17 @@ Secondly, write the config of your webpack module rule for md file
   test: /\.(md)$/,
   use: [
     {
+      loader: require.resolve('babel-loader'),
+      options: {
+        presets":[
+          "@babel/preset-env",
+          "@babel/preset-react"
+        ]
+      }
+    },
+    {
       loader: require.resolve('md-react-loader')
     }
-  ]
-}
-```
-
-I must remind you that, you need babel loader to compile the target file as a common js file
-
-```js
-{
-  test: /\.(js|jsx|md)$/,
-  use: [
-    {
-      loader: require.resolve('babel-loader'),
-    }
-  ]
-}
-```
-
-If you got some error, may be you shold check you babelrc config, have you write your babel config correctly?
-
-```js
-{
-  "presets":[
-    "@babel/preset-env",
-    "@babel/preset-react"
   ]
 }
 ```
@@ -65,7 +50,7 @@ Im sorry for that, you need this lib:
 npm install --save-dev babel-plugin-react-html-attrs
 ```
 
-and rewrite your babelrc file:
+and rewrite your babel loader config:
 
 ```js
 {
@@ -84,7 +69,7 @@ At the end, you just need to import the file directly, then you will get a objec
 ```js
 {
   html: 'your html',
-  Component: A react component
+  Component: a react component
 }
 ```
 

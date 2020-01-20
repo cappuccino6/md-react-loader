@@ -1,5 +1,5 @@
 import test from 'ava'
-import { processHtml } from './index'
+import { processHtml } from './utils'
 
 const html = `
   <h1>这是标题</h1>
