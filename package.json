@@ -1,17 +1,17 @@
 {
   "name": "md-react-loader",
-  "version": "0.0.37",
+  "version": "0.1.0",
   "description": "Webpack loader for markdown loader in React.js",
   "main": "lib/index.js",
   "scripts": {
     "test": "npm run lint && npm run spec",
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "spec": "ava",
+    "spec": "ava --verbose",
     "clean": "rm -rf lib",
     "build": "npm run clean && cross-env NODE_ENV=production && BABEL_ENV=esm babel src -d lib --copy-files && sass src/index.scss lib/index.css"
   },
-  "author": "",
+  "author": "zhengyuanbing",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -41,5 +41,15 @@
     "react",
     "webpack",
     "loader"
-  ]
+  ],
+  "ava": {
+    "files": [
+      "src/*.test.js"
+    ],
+    "babel": false,
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ]
+	}
 }
