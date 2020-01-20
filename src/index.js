@@ -25,21 +25,26 @@ export function processHtml (html) {
 function loader (source) {
   this.cacheable && this.cacheable()
   const options = Object.assign(defaultOptions, getOptions(this))
+  let result = null
   const callback = this.async()
   if (options.use_raw) {
-    callback(null, source)
+    result = `
+      const raw_content = '${source}'
+      export default raw_content
+    `
+  } else {
+    const html = renderMarkdown(source).trim()
+    result = `
+      import React, { Fragment } from 'react'
+      const Component = () => (
+        <Fragment>${processHtml(html)}</Fragment>
+      )
+      export default {
+        html: '${html.replace(/\n/g, '')}',
+        Component
+      }
+    `
   }
-  const html = renderMarkdown(source).trim()
-  const result = `
-    import React, { Fragment } from 'react'
-    const Component = () => (
-      <Fragment>${processHtml(html)}</Fragment>
-    )
-    export default {
-      html: '${html.replace(/\n/g, '')}',
-      Component
-    }
-  `
   callback(null, result)
 }
 
