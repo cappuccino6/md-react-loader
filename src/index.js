@@ -19,7 +19,7 @@ function loader (source) {
   } else {
     const html = parser(source).trim()
     result = `
-      import React, { Fragment } from 'react'
+      import React from 'react'
       const Component = props => (
         <div {...props}>${processHtml(html)}</div>
       )

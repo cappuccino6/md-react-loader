@@ -29,7 +29,7 @@ Secondly, write the config of your webpack module rule for md file
     {
       loader: require.resolve('babel-loader'),
       options: {
-        presets":[
+        presets:[
           "@babel/preset-env",
           "@babel/preset-react"
         ]
@@ -50,15 +50,15 @@ Im sorry for that, you need this lib:
 npm install --save-dev babel-plugin-react-html-attrs
 ```
 
-and rewrite your babel loader config:
+and rewrite your babel loader options:
 
 ```js
 {
-  "presets":[
+  presets:[
     "@babel/preset-env",
     "@babel/preset-react"
   ],
-  "plugins": [
+  plugins: [
     "react-html-attrs"
   ]
 }
@@ -73,11 +73,11 @@ At the end, you just need to import the file directly, then you will get a objec
 }
 ```
 
-so you can whatever use the Component directly, or render html in your own way
+so you can whatever use the Component directly, or render html in your own way, and meantime you can add your own props to this component
 
 ```js
 import Md from './MyTest.md'
-const MyComponent = () => <Md.Component />
+const MyComponent = () => <Md.Component className="my_own_class" />
 export default MyComponent
 
 or
@@ -98,7 +98,7 @@ import Md from './MyTest.md'
 import 'prismjs'
 import 'md-react-loader/lib/index.css'
 
-const MyComponent = () => <Md.Component />
+const MyComponent = () => <Md.Component className="my_own_class" />
 export default MyComponent
 ```
 
