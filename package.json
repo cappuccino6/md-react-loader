@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zybingo/md-react-loader.git"
+    "url": "git+https://github.com/Mr-Yolo/md-react-loader.git"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
