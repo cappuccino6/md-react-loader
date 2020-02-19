@@ -1,6 +1,6 @@
 {
   "name": "md-react-loader",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Webpack loader for markdown loader in React.js",
   "main": "lib/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mr-Yolo/md-react-loader.git"
+    "url": "git+https://github.com/yolozyb/md-react-loader.git"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
